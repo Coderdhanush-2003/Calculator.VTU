@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator.VTU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/search.css">
+ 
+</head>
+<body class="vh-100 overflow-hidden">
+    <!-- Navbar Start-->
+    <nav class="navbar navbar-expand-lg" id="Navi">
+        <div class="container">
+            <!--Logo Start-->
+            <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="Logo" width="250" height: "auto" class="d-inline-block align-text-top"></a>
+            <!--Logo End-->
+            <!--Toogle Button-->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Toogle Button-->
+
+            <!--Side Bar-->
+          <div class=" sidebar offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-dark border-bottom" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close btn-close-dark shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column p-3">
+              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-2 ">
+                <li class="nav-item text-dark" id="hover">
+                  <a class="nav-link text-dark" aria-current="page" href="index.html">SGPA Calculator</a>
+                </li>
+                <li class="nav-item text-dark" id="hover">
+                    <a class="nav-link text-dark" aria-current="page" bg-active href="cgpa.html">CGPA Calculator</a>
+                  </li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </nav>
+     <!-- Navbar End-->
+
+
+     <!--Calculator Starts-->
+     <div class="wrapper">
+        <h1>CGPA Calculator</h1>
+        <div class="row" style="margin-bottom: 20px ;">
+            <div class="col-md-4" class="autocomplete" style="margin-bottom: 10px ;">
+                <select id="course-code" class="form-control" type="text" placeholder="Course Name" name="myCountry" autocomplete="off">     
+                    <option value="Semester-1">Semester-1</option>
+                    <option value="Semester-2">Semester-2</option>
+                    <option value="Semester-3">Semester-3</option>
+                    <option value="Semester-4">Semester-4</option>
+                    <option value="Semester-5">Semester-5</option>
+                    <option value="Semester-6">Semester-6</option>
+                    <option value="Semester-7">Semester-7</option>
+                    <option value="Semester-8">Semester-8</option>
+                    <option value="Semester-9">Semester-9</option>
+                    <option value="Semester-10">Semester-10</option>
+                </select>
+            </div>
+            <div class="col-md-4" style="margin-bottom: 10px ;">
+                <input id="unit-load" class="form-control" type="number" placeholder="Credits" min="1" max="30">
+            </div>
+            <div class="col-md-4" style="margin-bottom: 10px ;">
+                <input id="grade" class="form-control" placeholder="SGPA" >
+            </div>
+        </div>
+         <div style="margin-top: 10px;">
+            <input id="add" class="btn btn-primary  btn-lg" type="button" value="Add">
+         </div>
+            
+                
+        </div>
+        <section style="margin: 20px 20px 20px 20px; text-align: center;">
+        <table id="table" class="table table-bordered display-none" >
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+        
+            </tbody>
+            <tfoot id="tfoot">
+        
+            </tfoot>
+        </table>
+        <div class="row" >
+            <div class="col" >
+                <input id="calc-gp" class="btn btn-success display-none" type="button" value="Calculate SGPA">
+            </div>
+            <div class="col">
+            <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
+            </div>
+        </div>
+    </section>
+    </div>
+    <!--Calculator ends-->
+     
+   
+
+
+
+
+     <script src="js/Search.js"></script>
+    <script src="js/index.js" charset="UTF-8"></script> 
+</body>
+</html>

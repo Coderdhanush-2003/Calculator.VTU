@@ -32,13 +32,13 @@
                     <a class="btn btn-outline-success nav-btn-outline text-dark"  style="margin-bottom: 10px; margin: 10px;" aria-current="page" href="index.html">SGPA Calculator</a>
                   </li>
                   <li class="nav-item">
-                    <a class="btn btn-outline-success active nav-btn-outline text-white" href="Cgpa.html" style="margin-bottom: 10px; margin: 10px;" >CGPA Calculator</a>
+                    <a class="btn btn-outline-success nav-btn-outline text-dark" href="Cgpa.html" style="margin-bottom: 10px; margin: 10px;" >CGPA Calculator</a>
                   </li>
                   <li class="nav-item">
                     <a class="btn btn-outline-success nav-btn-outline text-dark" href="Attendance.html" style="margin-bottom: 10px; margin: 10px;" >Attendance Calculator</a>
                   </li>
                   <li class="nav-item">
-                    <a class="btn btn-outline-success nav-btn-outline text-dark" href="Grade_Predictor.html" style="margin-bottom: 10px; margin: 10px;" >Grade Predictor</a>
+                    <a class="btn btn-outline-success active  nav-btn-outline text-white" href="Grade_Predictor.html" style="margin-bottom: 10px; margin: 10px;" >Grade Predictor</a>
                   </li>
                   <li class="dropdown ">
                     <button class="btn btn-outline-success nav-btn-outline text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#" style="margin-bottom: 10px; margin: 10px;" >Share</button>
@@ -95,70 +95,10 @@
    <!-- #1 - Course Panel -->
    <section style="margin-top: 100px;">
     <div class="card" style="margin: 20px 20px ;">
-        <div class="card-header text-center fw-bold">CGPA CALCULATOR</div>
+        <div class="card-header text-center fw-bold">GRADE PREDICTOR</div>
         <div class="card-body">
           <div class="wrapper">
-            
-            <div class="row" style="margin-bottom: 20px ;">
-              <div class="col-md-4" class="autocomplete" style="margin-bottom: 10px ;">
-                  <select id="course-code" class="form-control" type="text" placeholder="Semester" name="myCountry" autocomplete="off">  
-                 <option value="1">Semester</option>
-                 <option value="1">Semester-1</option>
-                 <option value="1">Semester-2</option>
-                 <option value="1">Semester-3</option>
-                 <option value="1">Semester-4</option>
-                 <option value="1">Semester-5</option>
-                 <option value="1">Semester-6</option>
-                 <option value="1">Semester-7</option>
-                 <option value="1">Semester-8</option>
-                 <option value="1">Semester-9</option>
-                 <option value="1">Semester-10</option>
-                  </select>
-                  
-              </div>
-              <div class="col-md-4" style="margin-bottom: 10px ;">
-                  <input id="unit-load" class="form-control"  min="1" max="30" placeholder="Credits">
-              </div>
-              <div class="col-md-4" style="margin-bottom: 10px ;">
-                  <input id="grade" class="form-control" min="1" max="10" placeholder="SGPA">
-              </div>
           </div>
-           <div style="margin-top: 10px;">
-              <input id="add" class="btn btn-primary  btn-lg" type="button" value="Add">
-           </div>     
-          </div>
-          <section style="margin: 20px 20px 20px 20px; text-align: center;">
-          <table id="table" class="table table-bordered display-none" >
-              <thead>
-                  <tr>
-                      <th>Course Name</th>
-                      <th>Credits</th>
-                      <th>Grade</th>
-                  </tr>
-              </thead>
-              <tbody id="tbody">
-          
-              </tbody>
-              <tfoot id="tfoot">
-          
-              </tfoot>
-          </table>
-
-          <div class="row"  >
-            <div class="col" style="margin-bottom: 20px;" >
-                <input id="calc-gp" class="btn btn-success display-none" type="button" value="Calculate SGPA">
-            </div>
-            <div class="col">
-            <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
-            </div>
-        </div>
-      </section>
-      </div>
-      <!--Calculator ends-->
-      </div>
-  </div>
-</div>
-
         </section>
         </div>
         <!--Calculator ends-->
@@ -167,7 +107,11 @@
 </div>
 
 </section>
-    <script src="js/cgpa.js" charset="UTF-8"></script> 
-    
+<!-- End of #1 - Course panel -->
+
+ 
+
+    <script src="js/Search.js"></script>
+    <script src="js/index.js" charset="UTF-8"></script> 
 </body>
 </html>

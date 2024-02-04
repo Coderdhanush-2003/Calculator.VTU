@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator.VTU</title>
+  <link  rel="icon" href="images/Icon.png" type="image/png">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+  </head>
+<body>
+
+  <!--Navigation bar  Start-->
+         <!--Logo -->
+         <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="/images/Logo.png" alt="Logo" width="250"  class="d-inline-block align-text-top"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-sucess center" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-dark btn-center" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 container-xl" >
+                  <li class="nav-item">
+                    <a class="btn btn-outline-success nav-btn-outline text-dark"  style="margin-bottom: 10px; margin: 10px;" aria-current="page" href="index.html">SGPA Calculator</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-success nav-btn-outline text-dark" href="Cgpa.html" style="margin-bottom: 10px; margin: 10px;" >CGPA Calculator</a>
+                  </li>
+                  <li class="dropdown ">
+                    <button class="btn btn-outline-success nav-btn-outline text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#" style="margin-bottom: 10px; margin: 10px;" >Share</button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item"
+                            href="https://www.facebook.com/sharer/sharer.php?message=Calculator.VTU-CGPA Calculator!&u=https://coderdhanush-2003.github.io/Calculator.VTU/"
+                            target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>&nbsp;&nbsp;Facebook</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                            class="dropdown-item"
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=https://coderdhanush-2003.github.io/Calculator.VTU/"
+                            target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>&nbsp;&nbsp;LinkedIn</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                            class="dropdown-item"
+                            href="https://twitter.com/intent/tweet?text=Calculator.VTU-CGPA Calculator! https://coderdhanush-2003.github.io/Calculator.VTU/"
+                            target="_blank"
+                        >
+                            <i class="fab fa-twitter"></i>
+                            <span>&nbsp;&nbsp;Twitter</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                            class="dropdown-item"
+                            href="whatsapp://send?text=Calculator.VTU-CGPA Calculator! https://coderdhanush-2003.github.io/Calculator.VTU/"
+                            
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                            <span>&nbsp;&nbsp;WhatsApp</span>
+                        </a>
+                      </li>
+                    </ul>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-success nav-btn-outline text-dark" href="https://github.com/Coderdhanush-2003/Calculator.VTU.git" target="_blank" style="margin-bottom: 10px; margin: 10px;" >Github</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+  <!--Navigation bar  Start-->
+
+
+   <!-- #1 - Course Panel -->
+   <section style="margin-top: 100px;">
+    <div class="card" style="margin: 20px 20px ;">
+        <div class="card-header text-center fw-bold">SGPA CALCULATOR</div>
+        <div class="card-body">
+          <div class="wrapper">
+            
+            <div class="row" style="margin-bottom: 20px ;">
+                <div class="col-md-4" class="autocomplete" style="margin-bottom: 10px ;">
+                    <select id="course-code" class="form-control" type="text" placeholder="Course Name" name="myCountry" autocomplete="off">  
+                    <option value="Course">Course</option>
+                    <option value="Biology for Engineers">Biology for Engineers</option>
+                    <option value="Engineering Chemistry">Engineering Chemistry</option>
+                    <option value="Environmental Studies">Environmental Studies</option>
+                    <option value="Engineering Chemistry Laboratory">Engineering Chemistry Laboratory</option>
+                    <option value="Problem Solving using C">Problem Solving using C</option>
+                    <option value="Computational Thinking for Problem Solving">Computational Thinking for Problem Solving</option>
+                    <option value="Problem Solving using C Laboratory">Problem Solving using C Laboratory</option>
+                    <option value="Computational Thinking Laboratory">Computational Thinking Laboratory</option>
+                    <option value="IT Workshop">IT Workshop</option>
+                    <option value="Basic Electrical, Electronics & Measurement Engineering">Basic Electrical, Electronics & Measurement Engineering</option>
+                    <option value="Introduction to Engineering">Introduction to Engineering</option>
+                    <option value="Engineering Products Laboratory">Engineering Products Laboratory</option>
+                    <option value="Professional Communication - I">Professional Communication - I</option>
+                    <option value="Professional Communication - II">Professional Communication - II</option>
+                    <option value="Linear Algebra for Computing">Linear Algebra for Computing</option>
+                    <option value="Calculus & Ordinary Differential Equations">Calculus & Ordinary Differential Equations</option>
+                    <option value="Probability, Statistics and Queuing Theory">Probability, Statistics and Queuing Theory</option>
+                    <option value="Design Thinking">Design Thinking</option>
+                    <option value="Universal Human Values">Universal Human Values</option>
+                    <option value="Innovation and Entrepreneurship">Innovation and Entrepreneurship</option>
+                    <option value="Project Management and Finance">Project Management and Finance</option>
+                    <option value="Engineering Graphics">Engineering Graphics</option>
+                    <option value="Semiconductor Physics">Semiconductor Physics</option>
+                    <option value="Modern Physics Laboratory">Modern Physics Laboratory</option>
+                    <option value="Discrete Mathematics">Discrete Mathematics</option>
+                    <option value="Data Structures">Data Structures</option>
+                    <option value="Operating Systems">Operating Systems</option>
+                    <option value="Computer Networks">Computer Networks</option>
+                    <option value="Formal Languages and Automata Theory">Formal Languages and Automata Theory</option>
+                    <option value="Image Processing">Image Processing</option>
+                    <option value="Modern Computer Architecture">Modern Computer Architecture</option>
+                    <option value="Digital Electronics">Digital Electronics</option>
+                    <option value="Design and Analysis of Algorithms">Design and Analysis of Algorithms</option>
+                    <option value="Object Oriented Programming using Java">Object Oriented Programming using Java</option>
+                    <option value="Database Management Systems">Database Management Systems</option>
+                    <option value="Web and Mobile Application Development">Web and Mobile Application Development</option>
+                    <option value="Python Programming">Python Programming</option>
+                    <option value="Data Structures Laboratory">Data Structures Laboratory</option>
+                    <option value="Computer Networks Laboratory">Computer Networks Laboratory</option>
+                    <option value="Operating Systems Laboratory">Operating Systems Laboratory</option>
+                    <option value="Competitive Coding - I">Competitive Coding - I</option>
+                    <option value="Competitive Coding - II">Competitive Coding - II</option>
+                    <option value="Startup Essentials">Startup Essentials</option>
+                    <option value="Nanotechnology in Agriculture">Nanotechnology in Agriculture</option>
+                    <option value="Intellectual Property Rights for Engineers">Intellectual Property Rights for Engineers</option>
+                    <option value="Organizational Behaviour">Organizational Behaviour</option>
+                    <option value="Use Case Approach for Vulnerability Analysis & Penetration Testing">Use Case Approach for Vulnerability Analysis & Penetration Testing</option>
+                    <option value="Professional Proficiency Course - I">Professional Proficiency Course - I</option>
+                    <option value="Professional Proficiency Course - II">Professional Proficiency Course - II</option>
+                    <option value="Professional Proficiency Course - III">Professional Proficiency Course - III</option>
+                    <option value="Engineers and Society">Engineers and Society</option>
+                    <option value="Constitution of India">Constitution of India</option>
+                    <option value="Compiler Design">Compiler Design</option>
+                    <option value="Data Warehousing and Data Mining">Data Warehousing and Data Mining</option>
+                    <option value="Microprocessor and Microcontroller">Microprocessor and Microcontroller</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Microprocessor and Microcontroller Laboratory">Microprocessor and Microcontroller Laboratory</option>
+                    <option value="Machine Learning Laboratory">Machine Learning Laboratory</option>
+                    <option value="Privacy and Security in Online Social Media">Privacy and Security in Online Social Media</option>
+                    <option value="Minor Project-II">Minor Project-II</option>
+                    <option value="Minor Project-I">Minor Project-I</option>
+                    <option value="CSP-community Service Project">CSP-community Service Project</option>
+                    <option value="NPTEL-1">NPTEL-1</option>
+                    <option value="NPTEL-2">NPTEL-2</option>
+                    <option value="Open Elective-1">Open Elective-1</option>
+                    <option value="Open Elective-2">Open Elective-2</option>
+                    <option value="Open Elective-3">Open Elective-3</option>
+                    <option value="Open Elective-4">Open Elective-4</option>
+                    <option value="Open Elective-5">Open Elective-5</option>
+                    <option value="Open Elective-6">Open Elective-6</option>
+                    <option value="Professional Proficiency Course - IV">Professional Proficiency Course - IV</option>
+                    <option value="Program Elective -1">Program Elective -1</option>
+                    <option value="Program Elective -2">Program Elective -2</option>
+                    <option value="Program Elective -3">Program Elective -3</option>
+                    <option value="Program Elective -4">Program Elective -4</option>
+                    <option value="Program Elective -5">Program Elective -5</option>
+                    <option value="Program Elective -6">Program Elective -6</option>
+                    <option value="Program Elective -7">Program Elective -7</option>
+                    <option value="Program Elective -8">Program Elective -8</option>
+                    <option value="Program Elective -9">Program Elective -9</option>
+                    <option value="IHL-1">IHL-1</option>
+                    <option value="IHL-2">IHL-2</option>
+                    <option value="IHL-3">IHL-3</option>
+                    </select>
+                    
+                </div>
+                <div class="col-md-4" style="margin-bottom: 10px ;">
+                    <select id="unit-load" class="form-control" type="number">
+                        <option value="Credits">Credits</option>
+                        <option >1</option>
+                        <option >2</option>
+                        <option >3</option>
+                        <option >4</option>
+                        <option >5</option>
+                    </select>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 10px ;">
+                    <select id="grade" class="form-control">
+                        <option value="">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="0">FAIL</option>
+                        
+                    </select>
+                </div>
+            </div>
+             <div style="margin-top: 10px;">
+                <input id="add" class="btn btn-primary  btn-lg" type="button" value="Add">
+             </div>     
+            </div>
+            <section style="margin: 20px 20px 20px 20px; text-align: center;">
+            <table id="table" class="table table-bordered display-none" >
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+            
+                </tbody>
+                <tfoot id="tfoot">
+            
+                </tfoot>
+            </table>
+
+            <div class="row"  >
+              <div class="col" style="margin-bottom: 20px;" >
+                  <input id="calc-gp" class="btn btn-success display-none" type="button" value="Calculate SGPA">
+              </div>
+              <div class="col">
+              <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
+              </div>
+          </div>
+        </section>
+        </div>
+        <!--Calculator ends-->
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- End of #1 - Course panel -->
+
+ 
+
+    <script src="js/Search.js"></script>
+    <script src="js/index.js" charset="UTF-8"></script> 
+</body>
+</html>

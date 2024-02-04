@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(225, 240, 218);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        background-color: rgb(191, 216, 175, 0.5);
+        backdrop-filter: blur(10px);
+    }
+}
+
+#Navi {
+    background-color: #99BC85;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hover {
+    transition: all 0.2s;
+    position: relative;
+}
+
+
+
+#hover:hover::after {
+    opacity: 1;
+}
+
+/* Nav end */
+/* Cal start */
+
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+table {
+    margin-top: 30px;
+}
+
+.display-none {
+    display: none;
+}
+
+tbody td {
+    text-transform: uppercase;
+}

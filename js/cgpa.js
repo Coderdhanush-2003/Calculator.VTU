@@ -20,7 +20,7 @@ add.addEventListener("click", () => {
   } else {
     const tr = document.createElement("tr");
     const tdCourseCode = document.createElement("td");
-    tdCourseCode.innerHTML = courseCode.value;
+    tdCourseCode.innerHTML = courseCode.options[courseCode.selectedIndex].text;
     const tdcredits = document.createElement("td");
     tdcredits.innerHTML = credits.value;
     const tdGrade = document.createElement("td");

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator.VTU</title>
-  <link  rel="icon" href="images/Icon.png" type="image/png">
-  <link rel="stylesheet" href="css/index.css">
+  <link  rel="icon" href="/images/Icon.png" type="image/png">
+  <link rel="stylesheet" href="css/attendence.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -17,7 +17,7 @@
          <!--Logo -->
          <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="images/Logo.png" type="image.png" alt="Logo" width="250"  class="d-inline-block align-text-top"></a>
+            <a class="navbar-brand" href="index.html"><img src="/images/Logo.png" alt="Logo" width="250"  class="d-inline-block align-text-top"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -95,20 +95,60 @@
    <!-- #1 - Course Panel -->
    <section style="margin-top: 100px;">
     <div class="card" style="margin: 20px 20px ;">
-        <div class="card-header text-center fw-bold">ATTENDANCE CALCULATOR</div>
-        <div class="card-body">
-         
-        <!--Calculator ends-->
-        </div>
-    </div>
-</div>
+      <div class="card-header text-center fw-bold">ATTENDANCE CALCULATOR</div>
+  <div class="card-body">
+  <div class="wrapper">
+      <div class="row">
+          <div class="col-md-4" class="autocomplete" style="margin-bottom: 10px ;" >
+              <input id="course-code"   class="form-control" type="text" placeholder="Course Name" autocomplete="off">  
+              <div class="result-box" style="position:absolute; overflow-y: auto; max-height: 200px; background-color: white; cursor: pointer; text-align: justify;"></div>
+            </div>
+          
+          <div class="col-md-4" style="margin-bottom: 10px ;">
+              <input id="unit-load" class="form-control" type="number" placeholder="Total No of Class" min="1" max="90">
+          </div>
+          <div class="col-md-4" style="margin-bottom: 10px ;">
+              <input id="Attended" class="form-control" type="number" placeholder="No of Class Attended" min="1" max="80">
+          </div>
+          <div class="col " style="margin-top: 10px;">
+              <input id="add" class="btn btn-outline-primary" type="button" value="Add">
 
+          </div>
+          <div class="col" style="margin-top: 10px;" >
+            <input id="clear" class="btn btn-outline-warning display-none " type="button" value="All Clear">
+            </div>
+      </div>
+      <div class="table-responsive-md">
+      <table id="table" class="table table-bordered border-info  table-hover display-none text-center">
+          <thead>
+              <tr class="table-success  ">
+                  <th>Course </th>
+                  <th>Total Class</th>
+                  <th>Attended Class</th>
+                  <th>Attendence Percentage(%)</th>
+                  <th>Eligible Status</th>
+                  <th>Marks</th>
+                  <th>clear</th>
+              </tr>
+          </thead>
+          <tbody id="tbody">
+      
+          </tbody>
+          <tfoot id="tfoot">
+      
+          </tfoot>
+      </table>
+  </div>
+     
+  </div>
+  </div>
+</div>
+ 
 </section>
 <!-- End of #1 - Course panel -->
 
  
-
-    <script src="js/Search.js"></script>
-    <script src="js/index.js" charset="UTF-8"></script> 
+<script src="js/Attendence.js"></script>
+<script src="js/Search.js"></script>
 </body>
 </html>

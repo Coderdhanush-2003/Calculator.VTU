@@ -25,10 +25,24 @@ add.addEventListener("click", () => {
     tdUnitLoad.innerHTML = unitLoad.value;
     const tdGrade = document.createElement("td");
     tdGrade.innerHTML = grade.options[grade.selectedIndex].text;
+
+    const tdRemoveButton = document.createElement("td");
+    const removeButton = document.createElement("button");
+    removeButton.classList.add("btn", "btn-outline-danger");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", () => {
+      tbody.removeChild(tr);
+      // You may want to update your gpArry array or perform any other actions here
+    });
+    tdRemoveButton.appendChild(removeButton);
+
+
     tr.appendChild(tdCourseCode);
     tr.appendChild(tdUnitLoad);
     tr.appendChild(tdGrade);
     tbody.appendChild(tr);
+    tr.appendChild(tdRemoveButton);
+    
     table.classList.remove("display-none");
     calcGp.classList.remove("display-none");
     clear.classList.remove("display-none");
@@ -57,11 +71,11 @@ calcGp.addEventListener("click", () => {
   const tr = document.createElement("tr");
 
   tdTotalUnitLoad = document.createElement("td");
-  tdTotalUnitLoad.innerHTML = `your total Credits is ${unitLoads}`;
+  tdTotalUnitLoad.innerHTML = `Total Credits = ${unitLoads}`;
 
   tdGpa = document.createElement("td");
   tdGpa.setAttribute("colspan", "2");
-  tdGpa.innerHTML = `your SGPA is ${(
+  tdGpa.innerHTML = ` SGPA = ${(
     sumOfProductOfUnitLoadsAndGrades / unitLoads
   ).toFixed(2)} `;
 
@@ -84,3 +98,4 @@ clear.addEventListener("click", () => {
   calcGp.classList.add("display-none");
   clear.classList.add("display-none");
 });
+

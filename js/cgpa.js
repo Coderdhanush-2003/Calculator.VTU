@@ -25,9 +25,22 @@ add.addEventListener("click", () => {
     tdcredits.innerHTML = credits.value;
     const tdGrade = document.createElement("td");
     tdGrade.innerHTML = grade.value;
+
+    const tdRemoveButton = document.createElement("td");
+    const removeButton = document.createElement("button");
+    removeButton.classList.add("btn", "btn-outline-danger");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", () => {
+      tbody.removeChild(tr);
+      // You may want to update your gpArry array or perform any other actions here
+    });
+    tdRemoveButton.appendChild(removeButton);
+
+
     tr.appendChild(tdCourseCode);
     tr.appendChild(tdcredits);
     tr.appendChild(tdGrade);
+    tr.appendChild(tdRemoveButton);
     tbody.appendChild(tr);
     table.classList.remove("display-none");
     calcGp.classList.remove("display-none");
@@ -86,4 +99,6 @@ calcGp.addEventListener("click", () => {
     calcGp.classList.add("display-none");
     clear.classList.add("display-none");
   });
+  
+
   
